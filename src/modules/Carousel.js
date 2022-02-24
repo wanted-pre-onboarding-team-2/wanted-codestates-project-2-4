@@ -6,11 +6,8 @@ import useAsync from "../hooks/useAsync";
 // 요청을 한 이후 response 에서 data 추출하여 반환하는 함수를 따로 만들었습니다.
 
 async function getCarousel() {
-  const response = await axios.get("https://test.daground.io/info/contents", {
+  const response = await axios.get("/info/contents", {
     headers: {
-      "Access-Control-Request-Method": "GET",
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
       "TEST-AUTH": "wantedpreonboarding",
     },
   });
