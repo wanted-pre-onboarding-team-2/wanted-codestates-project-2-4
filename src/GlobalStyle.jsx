@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   *,:after, :before {box-sizing:border-box;flex-shrink:0;}
   :root {-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;cursor:default;line-height:1.5;overflow-wrap:break-word;-moz-tab-size:4;tab-size:4}
   html {font-size: 62.5%;}
-  html, body {height:100%;}
+  html, body {height:100%; background-color: #F7F7FB;}
   img, picture, video, canvas, svg {display: block;max-width:100%;}
   button {background:none;border:0;cursor:pointer;}
   a {text-decoration:none}
