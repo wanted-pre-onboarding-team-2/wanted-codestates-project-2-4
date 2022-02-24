@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import useAsync from "./useAsync";
 
@@ -19,22 +19,39 @@ async function getCarousel() {
 
 function Carousel() {
   const [state, refetch] = useAsync(getCarousel, []);
+  const likeData = [];
   const { loading, data: carousels, error } = state; // state.data 를 users
 
   if (loading) return <div>로딩중...</div>;
   if (error) return <div>에러가 발생했습니다.</div>;
   if (!carousels) return null;
+
   if (carousels) {
-    console.log(carousels.content);
+    carousels.content.map(value => {
+      if (value.like_top === 1) {
+        likeData.push({
+          image: value.image,
+          link: value.link,
+          title: value.title,
+        });
+      }
+    });
+    console.log(likeData);
   }
 
   return (
     <>
-      {/* <div>
-        {carousels.map(carousel => (
-          <li>carousel</li>
-        ))}
-      </div> */}
+      <div>
+        {likeData &&
+          likeData.map((value, index) => (
+            <div>
+              <a href={value.link}>
+                <img src={value.image} alt={value.title} />
+              </a>
+              <div>{value.title}</div>
+            </div>
+          ))}
+      </div>
     </>
   );
 }
