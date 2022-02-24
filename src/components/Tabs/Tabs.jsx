@@ -18,18 +18,20 @@ const Tab = ({ active, onClick, label }) => {
 function Tabs({ onTabChange, selectedTab }) {
   return (
     <S.TabsBlock>
-      <S.TabsTitle>SandBank</S.TabsTitle>
-      <S.TabsContainer>
-        {TabData.map(tabItem => (
-          <Tab
-            key={tabItem.id}
-            active={selectedTab === tabItem.id}
-            label={tabItem.label}
-            onClick={() => onTabChange(tabItem.id)}
-          />
-        ))}
-        <S.TabSlider sliderPos={selectedTab} />
-      </S.TabsContainer>
+      <S.TabsWrapper>
+        <S.TabsTitle>SandBank</S.TabsTitle>
+        <S.TabsContainer>
+          {TabData.map(tabItem => (
+            <Tab
+              key={tabItem.id}
+              active={selectedTab === tabItem.id}
+              label={tabItem.label}
+              onClick={() => onTabChange(tabItem.id)}
+            />
+          ))}
+          <S.TabSlider sliderPos={selectedTab} />
+        </S.TabsContainer>
+      </S.TabsWrapper>
     </S.TabsBlock>
   );
 }

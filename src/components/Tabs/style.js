@@ -1,12 +1,18 @@
 import styled, { css } from "styled-components";
 
 export const TabsBlock = styled.div`
-  display: flex;
   width: 100%;
   background: white;
-  justify-content: space-between;
   padding: 0 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+`;
+
+export const TabsWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
 `;
 
 export const TabItem = styled.button`
