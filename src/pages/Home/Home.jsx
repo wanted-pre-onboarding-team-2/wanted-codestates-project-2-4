@@ -1,11 +1,15 @@
 import React from "react";
-import Carousel from "../../modules/Carousel";
+
+import Carousel from "../../api/Carousel";
+import * as S from "./style";
 
 function Home() {
   return (
-    <div>
-      <Carousel />
-    </div>
+    <>
+      <S.SliderArea>
+        <Carousel />
+      </S.SliderArea>
+    </>
   );
 }
 

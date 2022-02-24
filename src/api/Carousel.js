@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import useAsync from "../hooks/useAsync";
+import CarouselCard from "../components/CarouselCard";
 
 // useAsync 에서는 Promise 의 결과를 바로 data 에 담기 때문에,
 // 요청을 한 이후 response 에서 data 추출하여 반환하는 함수를 따로 만들었습니다.
 
 async function getCarousel() {
-  const response = await axios.get("https://test.daground.io/info/contents", {
+  const response = await axios.get("/info/contents", {
     headers: {
-      "Access-Control-Request-Method": "GET",
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
       "TEST-AUTH": "wantedpreonboarding",
     },
   });
@@ -36,22 +34,11 @@ function Carousel() {
         });
       }
     });
-    console.log(likeData);
   }
 
   return (
     <>
-      <div>
-        {likeData &&
-          likeData.map((value, index) => (
-            <div>
-              <a href={value.link}>
-                <img src={value.image} alt={value.title} />
-              </a>
-              <div>{value.title}</div>
-            </div>
-          ))}
-      </div>
+      <CarouselCard likeData={likeData} />
     </>
   );
 }
