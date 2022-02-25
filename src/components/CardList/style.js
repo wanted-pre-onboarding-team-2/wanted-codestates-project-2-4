@@ -8,7 +8,7 @@ export const Container = styled.div`
   max-width: 1300px;
   margin: 140px 10px;
   padding: 30px;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
 `;
 
 export const Wrapper = styled.div`
@@ -33,7 +33,7 @@ export const Label = styled.div`
 export const Cards = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  background-color: aqua;
+  /* background-color: aqua; */
   height: ${({ seeMore }) => (seeMore ? "auto" : "300px")};
   overflow: ${({ seeMore }) => !seeMore && "hidden"};
 `;

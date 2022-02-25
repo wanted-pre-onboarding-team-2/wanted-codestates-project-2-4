@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useSelector } from "react-redux";
 
 import Card from "../Card";
 import * as S from "./style";
 
 function CardList() {
+  const tab = useSelector(state => state.tab);
   const contents = useSelector(state => state.contents);
   const [sector, setSector] = useState([]);
   const [content, setContent] = useState([]);
@@ -14,10 +14,13 @@ function CardList() {
 
   useEffect(() => {
     if (contents.data) {
-      setSector(contents.data.sector);
-      setContent(contents.data.content);
+      const index = tab - 1;
+      setSector(contents.data.sector[index]);
+      const data = contents.data.content;
+      const result = data.filter(item => item.sector_id === tab);
+      setContent(result);
     }
-  }, [contents]);
+  }, [contents, tab]);
 
   const pressLike = (id, isLiked) => {
     const copyContent = [...content];
@@ -44,12 +47,12 @@ function CardList() {
   return (
     <S.Container>
       <S.Wrapper>
-        <S.Title>{sector[0]?.sector_kr}</S.Title>
-        <S.Label>{sector[0]?.type}</S.Label>
+        <S.Title>{sector.title}</S.Title>
+        <S.Label>{sector.type}</S.Label>
       </S.Wrapper>
       <S.Cards seeMore={seeMore}>
         {content.map(item => (
-          <Card key={item.id} cardContetnt={item} pressLike={pressLike} />
+          <Card key={item.id} cardContent={item} pressLike={pressLike} />
         ))}
       </S.Cards>
       <S.SeeMoreBtn onClick={handleSeeMoreBtn}>{BtnText}</S.SeeMoreBtn>
