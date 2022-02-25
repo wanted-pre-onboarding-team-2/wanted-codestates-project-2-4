@@ -1,12 +1,11 @@
 import React from "react";
-
-import Youtude from "../Youtude/Youtude";
+import Carousel from "../../modules/Carousel";
 
 function Home() {
   return (
-    <>
-      <Youtude />
-    </>
+    <div>
+      <Carousel />
+    </div>
   );
 }
 
