@@ -19,7 +19,6 @@ function Carousel({ infoValues }) {
       });
     });
   }
-
   return (
     <>
       <CarouselCard likeData={likeData} />

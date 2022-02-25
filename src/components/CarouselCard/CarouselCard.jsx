@@ -4,7 +4,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import * as S from "./style";
+
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+function CarouselCard({ likeData }) {
+  const activeTab = useSelector(state => state.tab);
+
 function CarouselCard({ infoValues }) {
+
   const settings = {
     dots: true,
     infinite: true,
@@ -16,6 +24,12 @@ function CarouselCard({ infoValues }) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  const navigate = useNavigate();
+  const handleClick = contentId => {
+    navigate(`/detail/${activeTab}?contentId=${contentId}`);
+  };
+
 
   let likeData = [];
   if (infoValues) {
@@ -30,6 +44,7 @@ function CarouselCard({ infoValues }) {
     });
   }
 
+
   return (
     <S.SliderWrap>
       <S.Header>새로 올라왔어요</S.Header>
@@ -37,10 +52,15 @@ function CarouselCard({ infoValues }) {
       <Slider {...settings}>
         {likeData &&
           likeData.map((value, index) => (
-            <div key={index}>
-              <a href={value.link}>
+            <div key={index} onClick={() => handleClick(value.id)}>
+              {activeTab === 2 && (
+                <a href={value.link}>
+                  <S.SliderImage src={value.image} alt={value.title} />
+                </a>
+              )}
+              {activeTab !== 2 && (
                 <S.SliderImage src={value.image} alt={value.title} />
-              </a>
+              )}
               <S.SliderTitle>{value.title}</S.SliderTitle>
             </div>
           ))}
