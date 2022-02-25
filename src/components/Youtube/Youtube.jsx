@@ -3,7 +3,7 @@ import React from "react";
 import * as S from "./style";
 
 export default function Youtube(props) {
-  const [youtude, setYoutude] = React.useState({
+  const [youtube, setYoutude] = React.useState({
     link: "FyUSkHccOq4",
     title:
       "부동산 시장에도 번진 크립토 금융! 이제 비트코인으로 모기지론 받는다?",
@@ -16,7 +16,7 @@ export default function Youtube(props) {
           <iframe
             width="100%"
             height="403"
-            src={`https://www.youtube.com/embed/${youtude.link}`}
+            src={`https://www.youtube.com/embed/${youtube.link}`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -24,8 +24,8 @@ export default function Youtube(props) {
           ></iframe>
         </S.YoutudeCard>
         <S.YoutudeContainer>
-          <S.YotudeTitle>{youtude.title}</S.YotudeTitle>
-          <S.YotudeContents>{youtude.body}</S.YotudeContents>
+          <S.YotudeTitle>{youtube.title}</S.YotudeTitle>
+          <S.YotudeContents>{youtube.body}</S.YotudeContents>
         </S.YoutudeContainer>
       </S.CardWraps>
     </>
