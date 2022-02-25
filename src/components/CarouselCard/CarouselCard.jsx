@@ -24,7 +24,9 @@ function CarouselCard({ infoValues }) {
   };
 
   const navigate = useNavigate();
+
   const handleClick = contentId => {
+    if (activeTab === 1) return;
     navigate(`/detail/${activeTab}?contentId=${contentId}`);
   };
 
@@ -49,12 +51,12 @@ function CarouselCard({ infoValues }) {
         {likeData &&
           likeData.map((value, index) => (
             <div key={index} onClick={() => handleClick(value.id)}>
-              {activeTab === 2 && (
-                <a href={value.link}>
+              {activeTab === 1 && (
+                <a href={value.link} target="_blank" rel="noreferrer">
                   <S.SliderImage src={value.image} alt={value.title} />
                 </a>
               )}
-              {activeTab !== 2 && (
+              {activeTab !== 1 && (
                 <S.SliderImage src={value.image} alt={value.title} />
               )}
               <S.SliderTitle>{value.title}</S.SliderTitle>
