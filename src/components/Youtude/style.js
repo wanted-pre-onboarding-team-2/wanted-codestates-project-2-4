@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export const CardWraps = styled.div`
@@ -35,7 +34,7 @@ export const YotudeTitle = styled.div`
   min-height: 124px;
   margin: 0 auto;
   padding: 45px 95px;
-  font-size: 1.875px;
+  font-size: 1.875rem;
   font-weight: 400px;
   background-color: #e9e9e9;
   border-radius: 30px 30px 0 0;
@@ -50,6 +49,6 @@ export const YotudeContents = styled.div`
   min-height: 523px;
   margin: 0 auto;
   padding: 71px;
-  font-size: 1.875px;
+  font-size: 1.875rem;
   font-weight: 400px;
 `;
