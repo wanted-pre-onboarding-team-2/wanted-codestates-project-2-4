@@ -28,17 +28,18 @@ export const Title = styled.h1`
 
 export const Label = styled.div`
   font-size: 1.6rem;
-  background-color: #669cfe;
   padding: 5px 10px;
   border-radius: 3px;
-  color: white;
+  color: #f7f7fb;
+  background-color: ${({ type }) => type === "Report" && "#8BDB81"};
+  background-color: ${({ type }) => type === "Youtube" && "#DE4217"};
+  background-color: ${({ type }) => type === "News" && "#9594D8"};
 `;
 
 export const Cards = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* background-color: aqua; */
   height: ${({ seeMore }) => (seeMore ? "auto" : "300px")};
   overflow: ${({ seeMore }) => !seeMore && "hidden"};
 `;
