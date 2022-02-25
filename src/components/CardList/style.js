@@ -14,10 +14,10 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  text-align: start;
   margin-bottom: 30px;
+  width: 100%;
+  padding-left: 35px;
+  text-align: start;
 `;
 
 export const Title = styled.h1`
@@ -28,7 +28,8 @@ export const Title = styled.h1`
 
 export const Label = styled.div`
   font-size: 1.6rem;
-  padding: 5px 10px;
+  padding: 0 13px;
+  line-height: 34px;
   border-radius: 3px;
   color: #f7f7fb;
   background-color: ${({ type }) => type === "Report" && "#8BDB81"};
