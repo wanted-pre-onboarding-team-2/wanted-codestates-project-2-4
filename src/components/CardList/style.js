@@ -39,7 +39,6 @@ export const Label = styled.div`
 
 export const Cards = styled.ul`
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   height: ${({ seeMore }) => (seeMore ? "auto" : "300px")};
   overflow: ${({ seeMore }) => !seeMore && "hidden"};
