@@ -9,7 +9,7 @@ function Detail() {
 
   return (
     <>
-      {id === "1" && <Youtube />}
+      {id === "2" && <Youtube />}
       {id === "3" && <Insight />}
     </>
   );
