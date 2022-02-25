@@ -8,7 +8,6 @@ export const Container = styled.div`
   max-width: 1300px;
   margin: 140px 10px;
   padding: 30px;
-  /* background-color: yellowgreen; */
 `;
 
 export const Wrapper = styled.div`
@@ -25,15 +24,17 @@ export const Title = styled.h1`
 
 export const Label = styled.div`
   font-size: 1.6rem;
-  background-color: blue;
-  padding: 0.3em;
+  padding: 3px 10px;
   border-radius: 3px;
+  color: #f7f7fb;
+  background-color: ${({ type }) => type === "Report" && "#8BDB81"};
+  background-color: ${({ type }) => type === "Youtube" && "#DE4217"};
+  background-color: ${({ type }) => type === "News" && "#9594D8"};
 `;
 
 export const Cards = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  /* background-color: aqua; */
   height: ${({ seeMore }) => (seeMore ? "auto" : "300px")};
   overflow: ${({ seeMore }) => !seeMore && "hidden"};
 `;
