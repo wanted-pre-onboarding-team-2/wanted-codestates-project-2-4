@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import Youtube from "../../components/Youtube";
+import Insight from "../../components/Insight";
+import { useSearchParams, useParams } from "react-router-dom";
 
 function Detail() {
-  return <div>Detail</div>;
+  const { id } = useParams();
+
+  return (
+    <>
+      {id === "2" && <Youtube />}
+      {id === "3" && <Insight />}
+    </>
+  );
 }
 
 export default Detail;

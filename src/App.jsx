@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Tabs from "./components/Tabs";
-import Youtude from "./components/Youtude";
 import SubscribeCard from "./components/SubscribeCard";
 import { loadSector } from "./modules/contents";
 import { setTab } from "./modules/tab";
