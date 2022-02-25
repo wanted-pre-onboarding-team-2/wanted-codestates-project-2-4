@@ -1,27 +1,30 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import Carousel from "../../api/Carousel";
 import CardList from "../../components/CardList/CardList";
 import * as S from "./style";
 
-function Home({ activeTab }) {
+function Home() {
   const { data, loading, error } = useSelector(state => state.contents);
-  // const infos = data.filter(v => v.sector_id === activeTab);
-  // console.log(infos);
-  // useEffect(() => {
+  const [infoValues, SetInfoValues] = useState();
+  const activeTab = useSelector(state => state.tab);
 
-  // }, [data])
-  // const infos = data.map(v => {
-  //   if (v.sector_id === activeTab) {
-  //     return v;
-  //   }
-  // });
-  // console.log(infos, "asdf");
+  useEffect(() => {
+    if (!data) return;
+    const tmpObj = data.content.filter(
+      v => v.sector_id === activeTab && v.like_top === 1,
+    );
+
+    SetInfoValues(tmpObj);
+  }, [data, activeTab, loading]);
+
   return (
     <>
       <S.SliderArea>
-        <Carousel activeTab={activeTab} />
+        <Carousel infoValues={infoValues} />
       </S.SliderArea>
       <CardList />
     </>
