@@ -16,11 +16,13 @@ function CardList() {
   useEffect(() => {
     if (contents.data) {
       const index = tab - 1;
-      setSector(contents.data.sector[index]);
-      setType(contents.data.sector[index].type);
-      const data = contents.data.content;
-      const result = data.filter(item => item.sector_id === tab);
-      setContent(result);
+      if (contents.data.sector) {
+        setSector(contents.data.sector[index]);
+        setType(contents.data.sector[index].type);
+        const data = contents.data.content;
+        const result = data.filter(item => item.sector_id === tab);
+        setContent(result);
+      }
     }
   }, [contents, tab]);
 
