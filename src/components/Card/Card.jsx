@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 
 import { FiHeart, FiShare } from "react-icons/fi";
 
-function Card({ cardContent }) {
+function Card({ cardContent, tabId }) {
+  const navigate = useNavigate();
   const [isLiked, setIsLiked] = useState(0);
   const [likeCount, setLikeCount] = useState(cardContent.like_cnt);
   const expressLike = () => {
@@ -21,7 +23,13 @@ function Card({ cardContent }) {
   return (
     <>
       <S.Card>
-        <S.CardThumbnail src={cardContent.image} alt="card-thumbnail" />
+        <S.CardThumbnail
+          src={cardContent.image}
+          alt="card-thumbnail"
+          onClick={() =>
+            navigate(`/detail/${tabId}?contentId=${cardContent.id}`)
+          }
+        />
         <S.CardInfo>
           <div>{cardContent.upload_date}</div>
           <S.CardControl>
