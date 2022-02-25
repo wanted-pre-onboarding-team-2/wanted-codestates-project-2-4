@@ -1,6 +1,6 @@
 # 원티드 프리온보딩 프론트엔드 코스 - 디에이그라운드
 
-✨[결과물 보러가기]()✨
+✨[결과물 보러가기](http://52.78.214.62:8888/)✨
 
 ## 사용 스택
 
@@ -11,6 +11,7 @@
   <img src="https://img.shields.io/badge/redux-green?style=for-the-badge" />
   <img src="https://img.shields.io/badge/react--redux-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/react--router--dom-CA4245?style=for-the-badge&logo=React-Router&logoColor=white" />
+  <img src="https://img.shields.io/badge/aws lightsail-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
 </p>
 
 ## 요구 사항
