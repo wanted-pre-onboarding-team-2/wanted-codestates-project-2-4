@@ -5,13 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Tabs from "./components/Tabs";
-import Youtude from "./components/Youtude";
+import Youtube from "./components/Youtube";
 import SubscribeCard from "./components/SubscribeCard";
 import { loadSector } from "./modules/contents";
 import { setTab } from "./modules/tab";
 
 function App() {
-
   const [activeTab, setActiveTab] = useState(1);
   const activeTab = useSelector(state => state.tab);
   const dispatch = useDispatch();
@@ -30,7 +29,6 @@ function App() {
       <Router>
         <Tabs selectedTab={activeTab} onTabChange={handleTabChange} />
         <SubscribeCard />
-        <Youtude />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/detail/:id" element={<Detail />} />

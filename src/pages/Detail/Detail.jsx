@@ -1,7 +1,13 @@
 import React from "react";
 
+import Youtube from "../../components/Youtube";
+
 function Detail() {
-  return <div>Detail</div>;
+  return (
+    <>
+      <Youtube />
+    </>
+  );
 }
 
 export default Detail;
