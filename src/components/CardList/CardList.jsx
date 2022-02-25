@@ -7,7 +7,6 @@ import * as S from "./style";
 
 function CardList() {
   const contents = useSelector(state => state.contents);
-  // const { data, loading, error } = useSelector(state => state.contents);
   const [sector, setSector] = useState([]);
   const [content, setContent] = useState([]);
   const [seeMore, setSeeMore] = useState(false);
