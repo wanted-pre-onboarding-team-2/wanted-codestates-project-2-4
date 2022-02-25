@@ -42,6 +42,7 @@ export const Cards = styled.ul`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
   width: 100%;
+
   height: ${({ seeMore }) => (seeMore ? "auto" : "300px")};
   overflow: ${({ seeMore }) => !seeMore && "hidden"};
 `;

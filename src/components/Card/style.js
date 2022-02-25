@@ -20,6 +20,10 @@ export const Card = styled.div`
 export const CardThumbnail = styled.img`
   width: 100%;
   border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const CardControl = styled.div`
