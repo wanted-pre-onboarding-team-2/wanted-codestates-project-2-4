@@ -14,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     if (!data) return;
-    const tmpObj = data.content.filter(
+    const tmpObj = data.content?.filter(
       v => v.sector_id === activeTab && v.like_top === 1,
     );
     SetInfoValues(tmpObj);

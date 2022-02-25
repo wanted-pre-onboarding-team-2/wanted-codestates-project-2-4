@@ -10,10 +10,7 @@ export const CardInfo = styled.div`
 
 export const Card = styled.div`
   position: relative;
-  width: 320px;
-  height: 180%;
   color: #8d8d8e;
-  margin: 10px;
   font-size: 1.4rem;
   font-weight: 500;
 `;
