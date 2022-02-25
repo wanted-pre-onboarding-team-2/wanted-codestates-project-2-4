@@ -42,7 +42,7 @@ function CardList() {
       </S.Wrapper>
       <S.Cards seeMore={seeMore}>
         {content.map(item => (
-          <Card key={item.id} cardContent={item} />
+          <Card key={item.id} cardContent={item} tabId={tab} />
         ))}
       </S.Cards>
       <S.SeeMoreBtn onClick={handleSeeMoreBtn}>{BtnText}</S.SeeMoreBtn>
