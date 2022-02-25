@@ -11,7 +11,7 @@ import { loadSector } from "./modules/contents";
 import { setTab } from "./modules/tab";
 
 function App() {
-  const [activeTab, setActiveTab] = useState(1);
+  // const [activeTab, setActiveTab] = useState(1);
   const activeTab = useSelector(state => state.tab);
   const dispatch = useDispatch();
 
@@ -30,7 +30,7 @@ function App() {
         <Tabs selectedTab={activeTab} onTabChange={handleTabChange} />
         <SubscribeCard />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home activeTab={activeTab} />} />
           <Route path="/detail/:id" element={<Detail />} />
         </Routes>
       </Router>
