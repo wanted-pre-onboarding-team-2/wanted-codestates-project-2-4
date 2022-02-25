@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
-import tabs from "./tabs";
+
+import contents from "./contents";
 
 const rootReducer = combineReducers({
-  tabs,
+  contents,
 });
 
 export default rootReducer;

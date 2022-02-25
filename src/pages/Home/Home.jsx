@@ -1,15 +1,14 @@
 import React from "react";
-
-import Carousel from "../../api/Carousel";
-import * as S from "./style";
+import { useSelector } from "react-redux";
+import Carousel from "../../modules/Carousel";
 
 function Home() {
+  const { data, loading, error } = useSelector(state => state.contents);
+  console.log(loading, error, data);
   return (
-    <>
-      <S.SliderArea>
-        <Carousel />
-      </S.SliderArea>
-    </>
+    <div>
+      <Carousel />
+    </div>
   );
 }
 
