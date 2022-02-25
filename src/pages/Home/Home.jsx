@@ -1,14 +1,31 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import Carousel from "../../modules/Carousel";
+
+import Carousel from "../../api/Carousel";
+import * as S from "./style";
 
 function Home() {
   const { data, loading, error } = useSelector(state => state.contents);
-  console.log(loading, error, data);
+  const [infoValues, SetInfoValues] = useState();
+  const activeTab = useSelector(state => state.tab);
+
+  useEffect(() => {
+    if (!data) return;
+    const tmpObj = data.content.filter(
+      v => v.sector_id === activeTab && v.like_top === 1,
+    );
+
+    SetInfoValues(tmpObj);
+  }, [data, activeTab, loading]);
+
   return (
-    <div>
-      <Carousel />
-    </div>
+    <>
+      <S.SliderArea>
+        <Carousel infoValues={infoValues} />
+      </S.SliderArea>
+    </>
   );
 }
 

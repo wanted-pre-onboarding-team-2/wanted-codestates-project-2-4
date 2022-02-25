@@ -11,9 +11,12 @@ export const Card = styled.div`
   right: 20px;
   width: 250px;
   height: 130px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px 0px #00000040;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 `;
 
 export const Content = styled.p`
