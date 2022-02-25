@@ -1,5 +1,17 @@
 # 원티드 프리온보딩 프론트엔드 코스 - 디에이그라운드
 
+## 사용 스택
+
+<p>
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
+  <img src="https://img.shields.io/badge/react--icons-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/redux-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/react--redux-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/react--router--dom-CA4245?style=for-the-badge&logo=React-Router&logoColor=white" " />
+  <img src="https://img.shields.io/badge/flicking-orange?style=for-the-badge" />
+</p>
+
 ## 요구 사항
 
 1. 상단 Tab bar에서 ‘유튜브’, 알쓸B잡’, ‘인사이트’ 탭까지 구현합니다. (퀴즈, 마켓은 구현하지 않습니다.)
