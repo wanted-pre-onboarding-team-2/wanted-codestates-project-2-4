@@ -19,18 +19,6 @@ function CardList() {
     }
   }, [contents]);
 
-  const pressLike = (id, isLiked) => {
-    const copyContent = [...content];
-
-    if (isLiked) {
-      copyContent.find(item => item.id === id).like_cnt -= 1;
-    } else {
-      copyContent.find(item => item.id === id).like_cnt += 1;
-    }
-
-    setContent(copyContent);
-  };
-
   const handleSeeMoreBtn = () => {
     if (seeMore) {
       setSeeMore(false);
@@ -49,7 +37,7 @@ function CardList() {
       </S.Wrapper>
       <S.Cards seeMore={seeMore}>
         {content.map(item => (
-          <Card key={item.id} cardContetnt={item} pressLike={pressLike} />
+          <Card key={item.id} cardContetnt={item} />
         ))}
       </S.Cards>
       <S.SeeMoreBtn onClick={handleSeeMoreBtn}>{BtnText}</S.SeeMoreBtn>

@@ -3,24 +3,21 @@ import * as S from "./style";
 
 import { FiHeart, FiShare } from "react-icons/fi";
 
-function Card({ cardContetnt, pressLike }) {
+function Card({ cardContetnt }) {
   const [isLiked, setIsLiked] = useState(0);
+  const [likeCount, setLikeCount] = useState(cardContetnt.like_cnt);
   const expressLike = () => {
     if (isLiked) {
       setIsLiked(0);
-      pressLike(cardContetnt.id, true);
+      setLikeCount(likeCount - 1);
       document.querySelector(`.like-${cardContetnt.id}`).style.color =
         "#8d8d8e";
     } else {
       setIsLiked(1);
-      pressLike(cardContetnt.id, false);
+      setLikeCount(likeCount + 1);
       document.querySelector(`.like-${cardContetnt.id}`).style.color = "red";
     }
   };
-
-  useEffect(() => {
-    console.log(1);
-  }, [cardContetnt]);
 
   return (
     <>
@@ -31,7 +28,7 @@ function Card({ cardContetnt, pressLike }) {
           <S.CardControl>
             <S.CardButton onClick={() => expressLike()}>
               <FiHeart className={`like-${cardContetnt.id}`} />
-              <p>{cardContetnt.like_cnt}</p>
+              <p>{likeCount}</p>
             </S.CardButton>
             <S.CardButton
               onClick={() => {
