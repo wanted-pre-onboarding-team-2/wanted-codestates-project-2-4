@@ -14,6 +14,10 @@ export const Card = styled.div`
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 0px 10px 0px #00000040;
+
+  @media all and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Content = styled.p`
