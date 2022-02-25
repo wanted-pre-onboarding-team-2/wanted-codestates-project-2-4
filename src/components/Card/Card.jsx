@@ -3,39 +3,36 @@ import * as S from "./style";
 
 import { FiHeart, FiShare } from "react-icons/fi";
 
-function Card({ cardContetnt, pressLike }) {
+function Card({ cardContent }) {
   const [isLiked, setIsLiked] = useState(0);
+  const [likeCount, setLikeCount] = useState(cardContent.like_cnt);
   const expressLike = () => {
     if (isLiked) {
       setIsLiked(0);
-      pressLike(cardContetnt.id, true);
-      document.querySelector(`.like-${cardContetnt.id}`).style.color =
+      setLikeCount(likeCount - 1);
+      document.querySelector(`.like-${cardContent.id}`).style.color =
         "#8d8d8e";
     } else {
       setIsLiked(1);
-      pressLike(cardContetnt.id, false);
-      document.querySelector(`.like-${cardContetnt.id}`).style.color = "red";
+      setLikeCount(likeCount + 1);
+      document.querySelector(`.like-${cardContent.id}`).style.color = "red";
     }
   };
-
-  useEffect(() => {
-    console.log(1);
-  }, [cardContetnt]);
 
   return (
     <>
       <S.Card>
-        <S.CardThumbnail src={cardContetnt.image} alt="card-thumbnail" />
+        <S.CardThumbnail src={cardContent.image} alt="card-thumbnail" />
         <S.CardInfo>
-          <div>{cardContetnt.upload_date}</div>
+          <div>{cardContent.upload_date}</div>
           <S.CardControl>
             <S.CardButton onClick={() => expressLike()}>
-              <FiHeart className={`like-${cardContetnt.id}`} />
-              <p>{cardContetnt.like_cnt}</p>
+              <FiHeart className={`like-${cardContent.id}`} />
+              <p>{likeCount}</p>
             </S.CardButton>
             <S.CardButton
               onClick={() => {
-                window.open(cardContetnt.link, "_blank");
+                window.open(cardContent.link, "_blank");
               }}
             >
               <FiShare />

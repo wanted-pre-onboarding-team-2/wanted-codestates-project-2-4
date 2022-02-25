@@ -15,7 +15,7 @@ async function getCarousel() {
   return response.data;
 }
 
-function Carousel() {
+function Carousel({ activeTab }) {
   const [state, refetch] = useAsync(getCarousel, []);
   const likeData = [];
   const { loading, data: carousels, error } = state; // state.data 를 users
@@ -28,7 +28,7 @@ function Carousel() {
 
   if (carousels) {
     carousels.content.map(value => {
-      if (value.like_top === 1) {
+      if (value.like_top === 1 && activeTab === value.sector_id) {
         likeData.push({
           image: value.image,
           link: value.link,

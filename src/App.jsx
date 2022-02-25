@@ -31,7 +31,7 @@ function App() {
         <SubscribeCard />
         <Youtude />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home activeTab={activeTab} />} />
           <Route path="/detail/:id" element={<Detail />} />
         </Routes>
       </Router>

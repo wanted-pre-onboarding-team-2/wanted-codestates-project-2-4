@@ -15,7 +15,7 @@ export const Card = styled.div`
   color: #8d8d8e;
   margin: 10px;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 export const CardThumbnail = styled.img`
