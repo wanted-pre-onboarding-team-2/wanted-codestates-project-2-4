@@ -26,7 +26,7 @@ function App() {
         <Tabs selectedTab={activeTab} onTabChange={handleTabChange} />
         <SubscribeCard />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home activeTab={activeTab} />} />
           <Route path="/detail/:id" element={<Detail />} />
         </Routes>
       </Router>
