@@ -22,7 +22,7 @@ function Tabs({ onTabChange, selectedTab }) {
         </S.TabsTitle>
         <S.TabsContainer>
           {data &&
-            data.sector.map(tabItem => (
+            data.sector?.map(tabItem => (
               <Tab
                 key={tabItem.id}
                 active={selectedTab === tabItem.id}
