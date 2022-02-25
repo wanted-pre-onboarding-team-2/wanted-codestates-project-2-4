@@ -6,14 +6,13 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Tabs from "./components/Tabs";
 import SubscribeCard from "./components/SubscribeCard";
-import { loadSector } from "./modules/sector";
+import { loadSector } from "./modules/contents";
 
 function App() {
-
   const [activeTab, setActiveTab] = useState(1);
   const dispatch = useDispatch();
-  
-    useEffect(() => {
+
+  useEffect(() => {
     dispatch(loadSector());
   }, []);
 
