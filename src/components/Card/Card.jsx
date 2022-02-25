@@ -1,31 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import * as S from "./style";
 
-function Card({ cardData }) {
+import { FiHeart, FiShare } from "react-icons/fi";
+
+function Card({ cardContetnt, pressLike }) {
+  const [isLiked, setIsLiked] = useState(0);
   const expressLike = () => {
-    console.log(1);
-    // copyCardList.forEach((item) => {
-    //   if (item.id === cardData.id) {
-    //     item.like_ctn += 1;
-    //  className={`like-${cardData.id}`}
-    // })
+    if (isLiked) {
+      setIsLiked(0);
+      pressLike(cardContetnt.id, true);
+      document.querySelector(`.like-${cardContetnt.id}`).style.color =
+        "#8d8d8e";
+    } else {
+      setIsLiked(1);
+      pressLike(cardContetnt.id, false);
+      document.querySelector(`.like-${cardContetnt.id}`).style.color = "red";
+    }
   };
+
+  useEffect(() => {
+    console.log(1);
+  }, [cardContetnt]);
 
   return (
     <>
       <S.Card>
-        <S.CardThumbnail
-          src="https://sandbank-image.s3.ap-northeast-2.amazonaws.com/info/block_032.png"
-          alt="card-thumbnail"
-        />
+        <S.CardThumbnail src={cardContetnt.image} alt="card-thumbnail" />
         <S.CardInfo>
-          <div>2022-01-01</div>
-          <div>
-            <S.CardButton onClick={expressLike()}>
-              <span>dfs</span>
+          <div>{cardContetnt.upload_date}</div>
+          <S.CardControl>
+            <S.CardButton onClick={() => expressLike()}>
+              <FiHeart className={`like-${cardContetnt.id}`} />
+              <p>{cardContetnt.like_cnt}</p>
             </S.CardButton>
-            <S.CardButton onClick={() => {}}>공유하기</S.CardButton>
-          </div>
+            <S.CardButton
+              onClick={() => {
+                window.open(cardContetnt.link, "_blank");
+              }}
+            >
+              <FiShare />
+              <p>공유하기</p>
+            </S.CardButton>
+          </S.CardControl>
         </S.CardInfo>
       </S.Card>
     </>
