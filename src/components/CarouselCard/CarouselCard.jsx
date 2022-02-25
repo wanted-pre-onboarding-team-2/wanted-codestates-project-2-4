@@ -8,11 +8,9 @@ import * as S from "./style";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-// function CarouselCard({ likeData }) {
 
 function CarouselCard({ infoValues }) {
   const activeTab = useSelector(state => state.tab);
-
   const settings = {
     dots: true,
     infinite: true,
