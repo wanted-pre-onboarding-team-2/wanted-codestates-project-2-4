@@ -19,6 +19,8 @@ function Carousel() {
   const likeData = [];
   const { loading, data: carousels, error } = state; // state.data 를 users
 
+  console.log(carousels);
+
   if (loading) return <div>로딩중...</div>;
   if (error) return <div>에러가 발생했습니다.</div>;
   if (!carousels) return null;

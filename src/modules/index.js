@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
-import sector from "./sector";
+import contents from "./contents";
 
 const rootReducer = combineReducers({
-  sector,
+  contents,
 });
 
 export default rootReducer;
