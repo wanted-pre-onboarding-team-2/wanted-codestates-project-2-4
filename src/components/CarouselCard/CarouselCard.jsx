@@ -20,11 +20,11 @@ function CarouselCard({ likeData }) {
   return (
     <S.SliderWrap>
       <S.Header>새로 올라왔어요</S.Header>
-      <S.badge>NEW</S.badge>
+      <S.Badge>NEW</S.Badge>
       <Slider {...settings}>
         {likeData &&
           likeData.map((value, index) => (
-            <div>
+            <div key={index}>
               <a href={value.link}>
                 <S.SliderImage src={value.image} alt={value.title} />
               </a>

@@ -4,7 +4,6 @@ export const SliderWrap = styled.div`
   width: 600px;
   height: 340px;
   margin: auto;
-
   .slick-dots li button::before {
     color: #8d8d8e;
     opacity: 0.7;
@@ -47,7 +46,7 @@ export const Header = styled.span`
   font-weight: 600;
 `;
 
-export const badge = styled.span`
+export const Badge = styled.span`
   background-color: #8bdb81;
   font-size: 1.6rem;
   padding: 3px;
