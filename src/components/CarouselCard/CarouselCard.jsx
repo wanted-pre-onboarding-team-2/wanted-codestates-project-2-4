@@ -24,7 +24,7 @@ function CarouselCard({ likeData }) {
       <Slider {...settings}>
         {likeData &&
           likeData.map((value, index) => (
-            <div>
+            <div key={index}>
               <a href={value.link}>
                 <S.SliderImage src={value.image} alt={value.title} />
               </a>
