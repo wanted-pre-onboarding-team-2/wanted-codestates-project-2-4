@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-import Carousel from "../../api/Carousel";
+import CarouselCard from "../../components/CarouselCard";
 import CardList from "../../components/CardList/CardList";
 import * as S from "./style";
 
@@ -17,14 +17,13 @@ function Home() {
     const tmpObj = data.content.filter(
       v => v.sector_id === activeTab && v.like_top === 1,
     );
-
     SetInfoValues(tmpObj);
   }, [data, activeTab, loading]);
 
   return (
     <S.Container>
       <S.SliderArea>
-        <Carousel infoValues={infoValues} />
+        <CarouselCard infoValues={infoValues} />
       </S.SliderArea>
       <CardList />
     </S.Container>

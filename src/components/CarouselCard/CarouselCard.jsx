@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import * as S from "./style";
-function CarouselCard({ likeData }) {
+function CarouselCard({ infoValues }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -16,6 +16,19 @@ function CarouselCard({ likeData }) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  let likeData = [];
+  if (infoValues) {
+    infoValues.map(value => {
+      likeData.push({
+        id: value.id,
+        image: value.image,
+        link: value.link,
+        title: value.title,
+        body: value.body,
+      });
+    });
+  }
 
   return (
     <S.SliderWrap>

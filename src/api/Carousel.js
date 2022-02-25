@@ -11,6 +11,7 @@ function Carousel({ infoValues }) {
   if (infoValues) {
     infoValues.map(value => {
       likeData.push({
+        id: value.id,
         image: value.image,
         link: value.link,
         title: value.title,
