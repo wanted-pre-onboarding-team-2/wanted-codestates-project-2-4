@@ -13,14 +13,17 @@ export const Card = styled.div`
   color: #8d8d8e;
   font-size: 1.4rem;
   font-weight: 500;
+  padding: 5px;
+  border-radius: 5px;
 `;
 
 export const CardThumbnail = styled.img`
   width: 100%;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    cursor: pointer;
+    transform: scale(1.04);
   }
 `;
 
