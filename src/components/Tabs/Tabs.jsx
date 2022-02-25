@@ -12,9 +12,11 @@ const Tab = ({ active, onClick, label }) => {
 };
 
 function Tabs({ onTabChange, selectedTab }) {
-  const { data, loading } = useSelector(state => state.contents);
+  const { data, loading, error } = useSelector(state => state.contents);
 
-  if (loading) return null;
+  if (loading) return <div>로딩중...</div>;
+  if (error) return null;
+
   return (
     <S.TabsBlock>
       <S.TabsWrapper>
