@@ -49,7 +49,7 @@ export const Header = styled.span`
 export const Badge = styled.span`
   background-color: #8bdb81;
   font-size: 1.6rem;
-  padding: 3px;
+  padding: 3px 7px;
   margin-left: 8px;
   color: white;
   border-radius: 5px;

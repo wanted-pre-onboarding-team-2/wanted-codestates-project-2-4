@@ -11,11 +11,13 @@ function CardList() {
   const [content, setContent] = useState([]);
   const [seeMore, setSeeMore] = useState(false);
   const [BtnText, setBntText] = useState("더보기");
+  const [type, setType] = useState("");
 
   useEffect(() => {
     if (contents.data) {
       const index = tab - 1;
       setSector(contents.data.sector[index]);
+      setType(contents.data.sector[index].type);
       const data = contents.data.content;
       const result = data.filter(item => item.sector_id === tab);
       setContent(result);
@@ -36,7 +38,7 @@ function CardList() {
     <S.Container>
       <S.Wrapper>
         <S.Title>{sector.title}</S.Title>
-        <S.Label>{sector.type}</S.Label>
+        <S.Label type={type}>{sector.type}</S.Label>
       </S.Wrapper>
       <S.Cards seeMore={seeMore}>
         {content.map(item => (
