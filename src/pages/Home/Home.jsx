@@ -1,7 +1,13 @@
 import React from "react";
 
+import Youtude from "../Youtude/Youtude";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <Youtude />
+    </>
+  );
 }
 
 export default Home;
