@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import Carousel from "../../api/Carousel";
+import CardList from "../../components/CardList/CardList";
 import * as S from "./style";
 
 function Home({ activeTab }) {
@@ -22,6 +23,7 @@ function Home({ activeTab }) {
       <S.SliderArea>
         <Carousel activeTab={activeTab} />
       </S.SliderArea>
+      <CardList />
     </>
   );
 }
