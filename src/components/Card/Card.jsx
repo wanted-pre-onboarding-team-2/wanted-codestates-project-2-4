@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import * as S from "./style";
 
 import { FiHeart, FiShare } from "react-icons/fi";
@@ -10,8 +10,7 @@ function Card({ cardContent }) {
     if (isLiked) {
       setIsLiked(0);
       setLikeCount(likeCount - 1);
-      document.querySelector(`.like-${cardContent.id}`).style.color =
-        "#8d8d8e";
+      document.querySelector(`.like-${cardContent.id}`).style.color = "#8d8d8e";
     } else {
       setIsLiked(1);
       setLikeCount(likeCount + 1);

@@ -5,33 +5,38 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1300px;
-  margin: 140px 10px;
-  padding: 30px;
-  /* background-color: yellowgreen; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 200px 10px;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   text-align: start;
+  margin-bottom: 30px;
 `;
 
 export const Title = styled.h1`
   font-size: 2.6rem;
-  margin-right: 20px;
+  font-weight: bold;
+  margin-right: 10px;
 `;
 
 export const Label = styled.div`
   font-size: 1.6rem;
-  background-color: blue;
-  padding: 0.3em;
+  background-color: #669cfe;
+  padding: 5px 10px;
   border-radius: 3px;
+  color: white;
 `;
 
 export const Cards = styled.ul`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   /* background-color: aqua; */
   height: ${({ seeMore }) => (seeMore ? "auto" : "300px")};

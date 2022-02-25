@@ -8,7 +8,7 @@ import CardList from "../../components/CardList/CardList";
 import * as S from "./style";
 
 function Home() {
-  const { data, loading, error } = useSelector(state => state.contents);
+  const { data, loading } = useSelector(state => state.contents);
   const [infoValues, SetInfoValues] = useState();
   const activeTab = useSelector(state => state.tab);
 
@@ -22,12 +22,12 @@ function Home() {
   }, [data, activeTab, loading]);
 
   return (
-    <>
+    <S.Container>
       <S.SliderArea>
         <Carousel infoValues={infoValues} />
       </S.SliderArea>
       <CardList />
-    </>
+    </S.Container>
   );
 }
 
