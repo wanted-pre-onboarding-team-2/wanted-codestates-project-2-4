@@ -8,15 +8,14 @@ function Card({ cardContent, tabId }) {
   const navigate = useNavigate();
   const [isLiked, setIsLiked] = useState(0);
   const [likeCount, setLikeCount] = useState(cardContent.like_cnt);
+
   const expressLike = () => {
     if (isLiked) {
       setIsLiked(0);
       setLikeCount(likeCount - 1);
-      document.querySelector(`.like-${cardContent.id}`).style.color = "#8d8d8e";
     } else {
       setIsLiked(1);
       setLikeCount(likeCount + 1);
-      document.querySelector(`.like-${cardContent.id}`).style.color = "red";
     }
   };
 
@@ -34,7 +33,9 @@ function Card({ cardContent, tabId }) {
           <div>{cardContent.upload_date}</div>
           <S.CardControl>
             <S.CardButton onClick={() => expressLike()}>
-              <FiHeart className={`like-${cardContent.id}`} />
+              <S.LikeIcon isLiked={isLiked}>
+                <FiHeart />
+              </S.LikeIcon>
               <p>{likeCount}</p>
             </S.CardButton>
             <S.CardButton
