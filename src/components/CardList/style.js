@@ -23,14 +23,14 @@ export const Wrapper = styled.div`
 export const Title = styled.h1`
   font-size: 2.6rem;
   font-weight: bold;
-  margin-right: 10px;
 `;
 
 export const Label = styled.div`
   font-size: 1.6rem;
-  padding: 0 13px;
-  line-height: 34px;
-  border-radius: 3px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  margin-left: 8px;
+  color: white;
   color: #f7f7fb;
   background-color: ${({ type }) => type === "Report" && "#8BDB81"};
   background-color: ${({ type }) => type === "Youtube" && "#DE4217"};

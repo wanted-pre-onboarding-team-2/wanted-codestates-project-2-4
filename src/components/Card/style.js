@@ -24,6 +24,7 @@ export const CardThumbnail = styled.img`
 
   &:hover {
     transform: scale(1.04);
+    cursor: pointer;
   }
 `;
 
