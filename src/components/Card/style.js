@@ -45,3 +45,7 @@ export const CardButton = styled.button`
     margin-left: 5px;
   }
 `;
+
+export const LikeIcon = styled.div`
+  color: ${({ isLiked }) => (isLiked ? "red" : "#8d8d8e")};
+`;
