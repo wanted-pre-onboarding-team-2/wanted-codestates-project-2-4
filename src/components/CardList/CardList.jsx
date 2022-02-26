@@ -10,8 +10,8 @@ function CardList() {
   const [sector, setSector] = useState([]);
   const [content, setContent] = useState([]);
   const [seeMore, setSeeMore] = useState(false);
-  const [BtnText, setBntText] = useState("더보기");
   const [type, setType] = useState("");
+  const btnText = seeMore ? "접기" : "더보기";
 
   useEffect(() => {
     if (contents.data) {
@@ -25,13 +25,7 @@ function CardList() {
   }, [contents, tab]);
 
   const handleSeeMoreBtn = () => {
-    if (seeMore) {
-      setSeeMore(false);
-      setBntText("더보기");
-    } else {
-      setSeeMore(true);
-      setBntText("접기");
-    }
+    setSeeMore(!seeMore);
   };
 
   return (
@@ -45,7 +39,7 @@ function CardList() {
           <Card key={item.id} cardContent={item} tabId={tab} />
         ))}
       </S.Cards>
-      <S.SeeMoreBtn onClick={handleSeeMoreBtn}>{BtnText}</S.SeeMoreBtn>
+      <S.SeeMoreBtn onClick={handleSeeMoreBtn}>{btnText}</S.SeeMoreBtn>
     </S.Container>
   );
 }
