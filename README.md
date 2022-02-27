@@ -32,38 +32,29 @@
   - 1팀 : 탭, Redux Setting
 
   - 2팀 : 카드 컴포넌트 ([박상우](https://github.com/SangWoo9734), [오카무라 카에](https://github.com/kaehehehe))<br/>
-  카드 컴포넌트의 구현 사항은 다음과 같습니다<br/> 
-
-   1. 탭 메뉴에 따라 컨텐츠가 변경<br/> 
-      탭 메뉴에 따라 타이틀, 라벨 테그, 컨텐츠가 바뀌도록 구현했습니다.<br/>  
-      <img width='400px' src="https://user-images.githubusercontent.com/49917043/155884643-2a2e0684-55d6-4c3c-b39d-43a177785a28.gif" />
-      <br/>
-      <br/>
-
-   
-   2. 반응형 컴포넌트<br/> 
-      웹 화면의 크기에 따라 내부 카드가 정렬되도록 반응형 컴포넌트로 제작하였습니다.<br/>  
-      <img width='400px' src="https://user-images.githubusercontent.com/49917043/155851771-cbc1b02a-a142-45b2-962a-2a5aadf3e80c.gif" />
-      <br/>
-      <br/>
-   3. 좋아요 기능 구현<br/>좋아요 버튼을 눌렀을 때 좋아요 카운트 수가 1증가하고, 다시 눌렀을 경우 카운트를 1 감소시키도록 구현하였고, 그에 따라 UI적으로 아이콘의 색상을 변경해주었습니다.<br/>  
-       <img width='400px' src="https://user-images.githubusercontent.com/49917043/155851954-1e1639b7-1795-4455-9a81-988ad88ed4e2.gif" />
-       <br/>
-       <br/>
-   4. 더보기 / 접기<br/> 
-      처음 화면이 랜더링되었을 때에는 상위 3개의 항목만 보여줍니다. '더보기'버튼을 통해 하위 항목에 대해서 모두 노출되도록 하며, '접기' 버튼을 통해 다시 컨텐츠 리스트를 접을 수 있습니다.<br/>   
-       <img width='400px' src="https://user-images.githubusercontent.com/49917043/155852137-28ed8c2a-8b8a-4719-9190-40a882381374.gif" />
-       <br/>
-       <br/>
-   5. 이미지 클릭시 상세페이지로 라우팅<br/>컨텐츠의 썸네일을 누를 경우 그 정보를 담고있는 Detail 페이지로 라우팅되도록 구현하였습니다.<br/>    
-       <img width='400px' src="https://user-images.githubusercontent.com/49917043/155874634-023b5606-6555-48cc-9c22-cae626fabb0d.gif" />
-       <br/>
-       <br/>
-   6. '공유하기'기능 구현<br/>
-      요구사항 명세에 따라 썸네일 하위의 '공유하기'를 누를 경우 외부 컨텐츠를 새창에서 보여줍니다.<br/>    
-       <img width='400px' src="https://user-images.githubusercontent.com/49917043/155852179-5cca0a90-a61f-4b23-aa9f-fe0d118b9295.gif" />
-       <br/>
-       <br/>
+     1. 탭 메뉴에 따라 컨텐츠가 변경<br/> 
+        탭 메뉴에 따라 타이틀, 라벨 테그, 컨텐츠가 바뀌도록 구현했습니다.<br/>  
+        <img width='350px' src="https://user-images.githubusercontent.com/49917043/155884643-2a2e0684-55d6-4c3c-b39d-43a177785a28.gif" />
+        <br/>
+     2. 반응형 컴포넌트<br/> 
+        웹 화면의 크기에 따라 내부 카드가 정렬되도록 반응형 컴포넌트로 제작하였습니다.<br/>  
+        <img width='350px' src="https://user-images.githubusercontent.com/49917043/155851771-cbc1b02a-a142-45b2-962a-2a5aadf3e80c.gif" />
+        <br/>
+     3. 좋아요 기능 구현<br/>
+        좋아요 버튼을 눌렀을 때 좋아요 카운트 수가 1증가하고, 다시 눌렀을 경우 카운트를 1 감소시키도록 구현하였고, 그에 따라 UI적으로 아이콘의 색상을 변경해주었습니다.<br/>  
+         <img width='350px' src="https://user-images.githubusercontent.com/49917043/155851954-1e1639b7-1795-4455-9a81-988ad88ed4e2.gif" />
+         <br/>
+     4. 더보기 / 접기<br/> 
+        처음 화면이 랜더링되었을 때에는 상위 3개의 항목만 보여줍니다. '더보기'버튼을 통해 하위 항목에 대해서 모두 노출되도록 하며, '접기' 버튼을 통해 다시 컨텐츠 리스트를 접을 수 있습니다.<br/>   
+         <img width='350px' src="https://user-images.githubusercontent.com/49917043/155852137-28ed8c2a-8b8a-4719-9190-40a882381374.gif" />
+         <br/>
+     5. 이미지 클릭시 상세페이지로 라우팅<br/>컨텐츠의 썸네일을 누를 경우 그 정보를 담고있는 Detail 페이지로 라우팅되도록 구현하였습니다.<br/>    
+         <img width='350px' src="https://user-images.githubusercontent.com/49917043/155874634-023b5606-6555-48cc-9c22-cae626fabb0d.gif" />
+         <br/>
+     6. '공유하기'기능 구현<br/>
+        요구사항 명세에 따라 썸네일 하위의 '공유하기'를 누를 경우 외부 컨텐츠를 새창에서 보여줍니다.<br/>    
+         <img width='350px' src="https://user-images.githubusercontent.com/49917043/155852179-5cca0a90-a61f-4b23-aa9f-fe0d118b9295.gif" />
+         <br/>
    
       
   - 3팀 : 케로셀 슬라이드, 상태페이지 구성 ([허민](https://github.com/hhhminme), [강동진](https://github.com/jinn2u), [신항민](https://github.com/ssinking91))
