@@ -45,7 +45,8 @@
 
     - ***이미지 클릭시 상세페이지로 라우팅***  
       컨텐츠의 썸네일을 누를 경우 그 정보를 담고있는 Detail 페이지로 라우팅되도록 구현하였습니다.    
-       <img width='400px' src="https://user-images.githubusercontent.com/49917043/155874471-b85b9fcf-eb7e-4a9f-b05e-aa07acc95bac.gif" />
+       <img width='400px' src="https://user-images.githubusercontent.com/49917043/155874634-023b5606-6555-48cc-9c22-cae626fabb0d.gif" />
+
 
     - ***'공유하기'기능 구현***  
       요구사항 명세에 따라 썸네일 하위의 '공유하기'를 누를 경우 외부 컨텐츠를 새창에서 보여줍니다.    
