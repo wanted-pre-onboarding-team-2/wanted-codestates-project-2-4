@@ -31,7 +31,7 @@
 ## 기능구현
   - 1팀 : 탭, Redux Setting
 
-  - 2팀 : 카드 컴포넌트 ([박상우](https://github.com/SangWoo9734) [오카무라 카에](https://github.com/kaehehehe))
+  - 2팀 : 카드 컴포넌트 ([박상우](https://github.com/SangWoo9734), [오카무라 카에](https://github.com/kaehehehe))  
     카드 컴포넌트의 구현 사항은 다음과 같습니다
     - ***반응형 컴포넌트***  
       웹 화면의 크기에 따라 내부 카드가 정렬되도록 반응형 컴포넌트로 제작하였습니다.  
@@ -45,7 +45,7 @@
 
     - ***이미지 클릭시 상세페이지로 라우팅***  
       컨텐츠의 썸네일을 누를 경우 그 정보를 담고있는 Detail 페이지로 라우팅되도록 구현하였습니다.    
-       <img width='400px' src="https://user-images.githubusercontent.com/49917043/155852185-a32fa249-17a1-4215-800b-b5ef2a5eb7b8.gif" />
+       <img width='400px' src="https://user-images.githubusercontent.com/49917043/155874471-b85b9fcf-eb7e-4a9f-b05e-aa07acc95bac.gif" />
 
     - ***'공유하기'기능 구현***  
       요구사항 명세에 따라 썸네일 하위의 '공유하기'를 누를 경우 외부 컨텐츠를 새창에서 보여줍니다.    
