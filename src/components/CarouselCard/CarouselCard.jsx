@@ -43,26 +43,28 @@ function CarouselCard({ infoValues }) {
   }
 
   return (
-    <S.SliderWrap>
+    <div>
       <S.Header>새로 올라왔어요</S.Header>
       <S.Badge>NEW</S.Badge>
-      <Slider {...settings}>
-        {likeData &&
-          likeData.map((value, index) => (
-            <div key={index} onClick={() => handleClick(value.id)}>
-              {activeTab === 1 && (
-                <a href={value.link} target="_blank" rel="noreferrer">
+      <S.SliderWrap>
+        <Slider {...settings}>
+          {likeData &&
+            likeData.map((value, index) => (
+              <div key={index} onClick={() => handleClick(value.id)}>
+                {activeTab === 1 && (
+                  <a href={value.link} target="_blank" rel="noreferrer">
+                    <S.SliderImage src={value.image} alt={value.title} />
+                  </a>
+                )}
+                {activeTab !== 1 && (
                   <S.SliderImage src={value.image} alt={value.title} />
-                </a>
-              )}
-              {activeTab !== 1 && (
-                <S.SliderImage src={value.image} alt={value.title} />
-              )}
-              <S.SliderTitle>{value.title}</S.SliderTitle>
-            </div>
-          ))}
-      </Slider>
-    </S.SliderWrap>
+                )}
+                <S.SliderTitle>{value.title}</S.SliderTitle>
+              </div>
+            ))}
+        </Slider>
+      </S.SliderWrap>
+    </div>
   );
 }
 
