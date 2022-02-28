@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const SliderWrap = styled.div`
-  width: 600px;
-  height: 340px;
+  width: 300px;
+  height: 150px;
   margin: auto;
   .slick-dots li button::before {
     color: #8d8d8e;
@@ -12,19 +12,38 @@ export const SliderWrap = styled.div`
     color: #669cfe;
     opacity: 1;
   }
+
+  @media (min-width: 768px) {
+    width: 600px;
+    height: 340px;
+  }
+  @media (min-width: 1024px) {
+    width: 1200px;
+    height: 680px;
+    padding-right: 90px;
+  }
 `;
 export const SliderImage = styled.img`
-  width: 600px;
-  height: 340px;
+  width: 300px;
+  height: 150px;
   object-fit: cover;
   border-radius: 18px;
   padding: 10px;
+
+  @media (min-width: 768px) {
+    width: 600px;
+    height: 340px;
+  }
+  @media (min-width: 1024px) {
+    width: 1200px;
+    height: 680px;
+  }
 `;
 
 export const SliderTitle = styled.div`
   text-align: center;
   padding: 5px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   border-radius: 8px;
   margin: 24px;
@@ -41,7 +60,7 @@ export const SliderTitle = styled.div`
 `;
 
 export const Header = styled.span`
-  font-size: 1.8rem;
+  font-size: 2.6rem;
   padding-left: 10px;
   font-weight: 600;
 `;
