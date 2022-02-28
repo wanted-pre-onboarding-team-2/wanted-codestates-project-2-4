@@ -54,4 +54,8 @@ export const SeeMoreBtn = styled.button`
   border-radius: 5px;
   background-color: #669cfe;
   color: #f7f7fb;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
