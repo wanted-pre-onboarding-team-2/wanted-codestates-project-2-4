@@ -25,9 +25,13 @@ function Card({ cardContent, tabId }) {
         <S.CardThumbnail
           src={cardContent.image}
           alt="card-thumbnail"
-          onClick={() =>
-            navigate(`/detail/${tabId}?contentId=${cardContent.id}`)
-          }
+          onClick={() => {
+            if (tabId === 1) {
+              window.open(cardContent.link);
+            } else {
+              navigate(`/detail/${tabId}?contentId=${cardContent.id}`);
+            }
+          }}
         />
         <S.CardInfo>
           <div>{cardContent.upload_date}</div>
